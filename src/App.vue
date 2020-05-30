@@ -121,66 +121,7 @@ export default {
 </script>
 
 <style lang="scss">
-// Bulma vars
-@import '~bulma/sass/utilities/_all';
-
-$primary: #c8d7c8;
-$primary-invert: findColorInvert($primary);
-$twitter: #4099ff;
-$twitter-invert: findColorInvert($twitter);
-
-$colors: (
-  'white': (
-    $white,
-    $black,
-  ),
-  'black': (
-    $black,
-    $white,
-  ),
-  'light': (
-    $light,
-    $light-invert,
-  ),
-  'dark': (
-    $dark,
-    $dark-invert,
-  ),
-  'primary': (
-    $primary,
-    $primary-invert,
-  ),
-  'info': (
-    $info,
-    $info-invert,
-  ),
-  'success': (
-    $success,
-    $success-invert,
-  ),
-  'warning': (
-    $warning,
-    $warning-invert,
-  ),
-  'danger': (
-    $danger,
-    $danger-invert,
-  ),
-  'twitter': (
-    $twitter,
-    $twitter-invert,
-  ),
-);
-
-// Import Bulma
-@import '~bulma';
-
-// FontAwesome 5
-$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
-@import '~@fortawesome/fontawesome-free/scss/fontawesome';
-@import '~@fortawesome/fontawesome-free/scss/regular';
-@import '~@fortawesome/fontawesome-free/scss/solid';
-@import '~@fortawesome/fontawesome-free/scss/brands';
+@import 'assets/scss/app';
 
 .is-rounded img {
   border-radius: 300000px;
