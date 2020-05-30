@@ -1,30 +1,78 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import Vue from 'vue'
+import Router from 'vue-router'
+import Dashboard from '../pages/Dashboard.vue'
+import Login from '../pages/Login.vue'
+import Books from '../pages/Books.vue'
+import BookNew from '../pages/BookNew.vue'
+import BookEdit from '../pages/BookEdit.vue'
+import Orders from '../pages/Orders.vue'
+import OrderEdit from '../pages/OrderEdit.vue'
+import Customers from '../pages/Customers.vue'
+import CustomerNew from '../pages/CustomerNew.vue'
+import CustomerEdit from '../pages/CustomerEdit.vue'
 
-Vue.use(VueRouter);
+Vue.use(Router)
 
-const routes = [
-  {
-    path: "/",
-    name: "Home",
-    component: Home
-  },
-  {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
-  }
-];
-
-const router = new VueRouter({
-  mode: "history",
-  base: process.env.BASE_URL,
-  routes
-});
-
-export default router;
+export default new Router({
+  routes: [
+    {
+      path: '/',
+      redirect: '/login',
+    },
+    {
+      path: '/logout',
+      redirect: '/login',
+    },
+    {
+      path: '/dashboard',
+      name: 'Dashboard',
+      component: Dashboard,
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      component: Login,
+    },
+    {
+      path: '/books',
+      name: 'Books',
+      component: Books,
+    },
+    {
+      path: '/new-book',
+      name: 'BookNew',
+      component: BookNew,
+    },
+    {
+      path: '/edit-book',
+      name: 'BookEdit',
+      component: BookEdit,
+    },
+    {
+      path: '/orders',
+      name: 'Orders',
+      component: Orders,
+    },
+    {
+      path: '/edit-order',
+      name: 'OrderEdit',
+      component: OrderEdit,
+    },
+    {
+      path: '/customers',
+      name: 'Customers',
+      component: Customers,
+    },
+    {
+      path: '/new-customer',
+      name: 'CustomerNew',
+      component: CustomerNew,
+    },
+    {
+      path: '/edit-customer',
+      name: 'CustomerEdit',
+      component: CustomerEdit,
+    },
+  ],
+  linkActiveClass: 'is-active' /* change to Bulmas active nav link */,
+})
